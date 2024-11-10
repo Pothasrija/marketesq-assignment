@@ -6,7 +6,7 @@ export default function Discover() {
    return (
       <>
          {/* Your component content here */}
-         <section className="max-w-6xl mx-auto px-4">
+         <section className="max-w-6xl mx-auto px-4 mt-20">
             <H2Heading>Discover</H2Heading>
 
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
