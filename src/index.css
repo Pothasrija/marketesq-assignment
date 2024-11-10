@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+}
+.shadow-custom {
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
