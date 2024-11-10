@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { H2Heading } from "./common/heading";
 import { StarIcon } from "./common/icons";
 
@@ -49,21 +50,32 @@ function TestimonialCard({ img }: { img?: boolean }) {
                   </div>
                </div>
             </div>
-            <p className="">
-               <span className="text-gray-700 line-clamp-3">
-                  I am writing this after reflecting on my one month stay with
-                  Bricabin in Ladakh. Right from picking us up at the airport to
-                  dropping us back there after a month, Urgan was very
-                  responsible and took good care of my friends and me.
-               </span>
-               <a
-                  href="#"
-                  className="text-primary hover:underline text-blue-600"
-               >
-                  read more
-               </a>
-            </p>
+            <Description />
          </div>
       </div>
+   );
+}
+
+function Description() {
+   const [showMore, setShowMore] = useState(false);
+   return (
+      <p>
+         <span
+            className={`text-gray-700 ${
+               showMore ? "line-clamp-none" : "line-clamp-3"
+            }`}
+         >
+            I am writing this after reflecting on my one month stay with
+            Bricabin in Ladakh. Right from picking us up at the airport to
+            dropping us back there after a month, Urgan was very responsible and
+            took good care of my friends and me.
+         </span>
+         <button
+            onClick={() => setShowMore(!showMore)}
+            className="text-primary hover:underline text-blue-600"
+         >
+            {showMore ? "read less" : "read more"}
+         </button>
+      </p>
    );
 }
